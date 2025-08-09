@@ -1,0 +1,584 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Photo Gallery - Shubh Jagran">
+	<Header />
+	
+	<main>
+		<section class="page-header">
+			<div class="container">
+				<h1 class="page-title fade-in"> फोटो गैलरी</h1>
+				<p class="page-subtitle fade-in">हमारे दिव्य आयोजनों की झलकें</p>
+			</div>
+		</section>
+
+		<section class="photo-gallery">
+			<div class="container">
+				<div class="gallery-filter fade-in">
+					<button class="filter-btn active" data-filter="all">All Photos</button>
+					<button class="filter-btn" data-filter="jagran">Jagran Events</button>
+					<button class="filter-btn" data-filter="bhajan">Bhajan Sessions</button>
+					<button class="filter-btn" data-filter="community">Community</button>
+				</div>
+
+				<div class="gallery-grid">
+					<!-- Photo 1 -->
+					<div class="gallery-item fade-in" data-category="jagran">
+						<img src="/images/a8.jpg" alt="Jagran" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3>हनुमान जी की झाँकी</h3>
+								<p>2025</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 2 -->
+					<div class="gallery-item fade-in" data-category="bhajan">
+						<img src="/images/a13.jpg" alt="Bhajan Session" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3>हमारे दिव्य झाँकी</h3>
+								<p>2025</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 3 -->
+					<div class="gallery-item fade-in" data-category="community">
+						<img src="/images/a6.jpg" alt="Community Gathering" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3>मारे भक्ति जागरण की झलकियाँ</h3>
+								<p>2024</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 4 -->
+					<div class="gallery-item fade-in" data-category="jagran">
+						<img src="/images/a12.jpg" alt="Night Jagran" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3>महाशिवरात्रि जागरण</h3>
+								<p>2024</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 5 -->
+					<div class="gallery-item fade-in" data-category="bhajan">
+						<img src="/images/a7.jpg" alt="Devotional Singing" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3>समूह भजन प्रस्तुति</h3>
+								<p>2024</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 6 -->
+					<div class="gallery-item fade-in" data-category="community">
+						<img src="/images/a3.jpg" alt="Devotees" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3> भक्तों का मिलन समारोह</h3>
+								<p>2024</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 7 -->
+					<div class="gallery-item fade-in" data-category="jagran">
+						<img src="/images/a1.jpg" alt="Ram Navami" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3> राम नवमी का पावन समारोह</h3>
+								<p>2024</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 8 -->
+					<div class="gallery-item fade-in" data-category="bhajan">
+						<img src="/images/a11.jpg" alt="Aarti" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3> श्रीराम दरबार</h3>
+								<p>2025</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 9 -->
+					<div class="gallery-item fade-in" data-category="community">
+						<img src="/images/a9.jpg" alt="Children's Program" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3>भक्ति कार्यक्रम</h3>
+								<p>2024</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 10 -->
+					<div class="gallery-item fade-in" data-category="jagran">
+						<img src="/images/a14.jpg" alt="Diwali Jagran" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3>दीवाली विशेष जागरण</h3>
+								<p>2024</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 11 -->
+					<div class="gallery-item fade-in" data-category="bhajan">
+						<img src="/images/a10.jpg" alt="Musical Performance" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3>संगीतमय प्रस्तुति</h3>
+								<p>2025</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Photo 12 -->
+					<div class="gallery-item fade-in" data-category="community">
+						<img src="/images/a4.jpg" alt="Volunteer Service" />
+						<div class="overlay">
+							<div class="overlay-content">
+								<h3>माता की चौकी</h3>
+								<p>2024</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Lightbox Modal -->
+	<div class="lightbox" id="lightbox">
+		<div class="lightbox-content">
+			<button class="lightbox-close">&times;</button>
+			<button class="lightbox-prev">&#8249;</button>
+			<button class="lightbox-next">&#8250;</button>
+			<img class="lightbox-img" id="lightboxImg" src="" alt="">
+			<div class="lightbox-caption">
+				<h3 id="lightboxTitle"></h3>
+				<p id="lightboxDate"></p>
+			</div>
+		</div>
+	</div>
+	
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		margin-top: 115px;
+	}
+
+	.page-header {
+		background: linear-gradient(rgba(139,0,0,0.8), rgba(92,0,0,0.8)), 
+		            url('https://images.pexels.com/photos/6611184/pexels-photo-6611184.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
+		padding: 4rem 0;
+		text-align: center;
+		color: white;
+	}
+
+	.page-title {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		color: var(--gold);
+	}
+
+	.page-subtitle {
+		font-size: 1.2rem;
+		color: var(--light-saffron);
+	}
+
+	.photo-gallery {
+		padding: 4rem 0;
+	}
+
+	.gallery-filter {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-bottom: 3rem;
+	}
+
+	.filter-btn {
+		padding: 0.75rem 1.5rem;
+		background: transparent;
+		border: 2px solid var(--maroon);
+		color: var(--maroon);
+		border-radius: 25px;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.filter-btn:hover,
+	.filter-btn.active {
+		background: var(--maroon);
+		color: white;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
+	}
+
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.gallery-item {
+		position: relative;
+		border-radius: 15px;
+		overflow: hidden;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		aspect-ratio: 4/3;
+	}
+
+	.gallery-item:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 20px 40px rgba(139, 0, 0, 0.2);
+	}
+
+	.gallery-item img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.gallery-item:hover img {
+		transform: scale(1.05);
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgba(0,0,0,0.3), rgba(139,0,0,0.8));
+		display: flex;
+		align-items: flex-end;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.gallery-item:hover .overlay {
+		opacity: 1;
+	}
+
+	.overlay-content {
+		color: white;
+		padding: 1.5rem;
+		width: 100%;
+	}
+
+	.overlay-content h3 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+		color: var(--gold);
+	}
+
+	.overlay-content p {
+		color: var(--light-saffron);
+		font-size: 0.9rem;
+	}
+
+	/* Lightbox Styles */
+	.lightbox {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.9);
+		z-index: 2000;
+		backdrop-filter: blur(5px);
+	}
+
+	.lightbox-content {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.lightbox-img {
+		max-width: 90%;
+		max-height: 80%;
+		object-fit: contain;
+		border-radius: 10px;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+	}
+
+	.lightbox-caption {
+		text-align: center;
+		color: white;
+		margin-top: 1rem;
+		padding: 1rem;
+	}
+
+	.lightbox-caption h3 {
+		color: var(--gold);
+		margin-bottom: 0.5rem;
+		font-size: 1.5rem;
+	}
+
+	.lightbox-caption p {
+		color: var(--light-saffron);
+	}
+
+	.lightbox-close,
+	.lightbox-prev,
+	.lightbox-next {
+		position: absolute;
+		background: rgba(255, 255, 255, 0.1);
+		border: none;
+		color: white;
+		font-size: 2rem;
+		cursor: pointer;
+		padding: 1rem;
+		border-radius: 50%;
+		transition: all 0.3s ease;
+		backdrop-filter: blur(10px);
+	}
+
+	.lightbox-close {
+		top: 2rem;
+		right: 2rem;
+		width: 60px;
+		height: 60px;
+	}
+
+	.lightbox-prev {
+		left: 2rem;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 60px;
+		height: 60px;
+	}
+
+	.lightbox-next {
+		right: 2rem;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 60px;
+		height: 60px;
+	}
+
+	.lightbox-close:hover,
+	.lightbox-prev:hover,
+	.lightbox-next:hover {
+		background: rgba(255, 153, 51, 0.3);
+		transform: translateY(-50%) scale(1.1);
+	}
+
+	.lightbox-close:hover {
+		transform: scale(1.1);
+	}
+
+	.gallery-item.hidden {
+		display: none;
+	}
+
+	@media (max-width: 768px) {
+		.page-title {
+			font-size: 2rem;
+		}
+
+		.gallery-grid {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 1rem;
+		}
+
+		.filter-btn {
+			padding: 0.5rem 1rem;
+			font-size: 0.9rem;
+		}
+
+		.lightbox-close,
+		.lightbox-prev,
+		.lightbox-next {
+			width: 50px;
+			height: 50px;
+			font-size: 1.5rem;
+		}
+
+		.lightbox-close {
+			top: 1rem;
+			right: 1rem;
+		}
+
+		.lightbox-prev {
+			left: 1rem;
+		}
+
+		.lightbox-next {
+			right: 1rem;
+		}
+
+		.lightbox-img {
+			max-width: 95%;
+			max-height: 70%;
+		}
+	}
+</style>
+
+<script>
+	// Gallery filter functionality
+	const filterBtns = document.querySelectorAll('.filter-btn');
+	const galleryItems = document.querySelectorAll('.gallery-item');
+
+	filterBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			// Remove active class from all buttons
+			filterBtns.forEach(b => b.classList.remove('active'));
+			// Add active class to clicked button
+			btn.classList.add('active');
+
+			const filter = btn.dataset.filter;
+
+			galleryItems.forEach(item => {
+				if (filter === 'all' || item.dataset.category === filter) {
+					item.classList.remove('hidden');
+					item.style.display = 'block';
+				} else {
+					item.classList.add('hidden');
+					item.style.display = 'none';
+				}
+			});
+		});
+	});
+
+	// Lightbox functionality
+	const lightbox = document.getElementById('lightbox');
+	const lightboxImg = document.getElementById('lightboxImg');
+	const lightboxTitle = document.getElementById('lightboxTitle');
+	const lightboxDate = document.getElementById('lightboxDate');
+	const lightboxClose = document.querySelector('.lightbox-close');
+	const lightboxPrev = document.querySelector('.lightbox-prev');
+	const lightboxNext = document.querySelector('.lightbox-next');
+
+	let currentImageIndex = 0;
+	let visibleImages = [];
+
+	function updateVisibleImages() {
+		visibleImages = Array.from(galleryItems).filter(item => !item.classList.contains('hidden'));
+	}
+
+	function openLightbox(index) {
+		updateVisibleImages();
+		currentImageIndex = index;
+		showImage(currentImageIndex);
+		lightbox.style.display = 'block';
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeLightbox() {
+		lightbox.style.display = 'none';
+		document.body.style.overflow = 'auto';
+	}
+
+	function showImage(index) {
+		if (visibleImages[index]) {
+			const img = visibleImages[index].querySelector('img');
+			const title = visibleImages[index].querySelector('.overlay-content h3').textContent;
+			const date = visibleImages[index].querySelector('.overlay-content p').textContent;
+
+			lightboxImg.src = img.src;
+			lightboxImg.alt = img.alt;
+			lightboxTitle.textContent = title;
+			lightboxDate.textContent = date;
+		}
+	}
+
+	function nextImage() {
+		currentImageIndex = (currentImageIndex + 1) % visibleImages.length;
+		showImage(currentImageIndex);
+	}
+
+	function prevImage() {
+		currentImageIndex = (currentImageIndex - 1 + visibleImages.length) % visibleImages.length;
+		showImage(currentImageIndex);
+	}
+
+	// Add click event to gallery items
+	galleryItems.forEach((item, index) => {
+		item.addEventListener('click', () => {
+			updateVisibleImages();
+			const visibleIndex = visibleImages.indexOf(item);
+			if (visibleIndex !== -1) {
+				openLightbox(visibleIndex);
+			}
+		});
+	});
+
+	// Lightbox event listeners
+	lightboxClose.addEventListener('click', closeLightbox);
+	lightboxNext.addEventListener('click', nextImage);
+	lightboxPrev.addEventListener('click', prevImage);
+
+	// Close lightbox when clicking outside image
+	lightbox.addEventListener('click', (e) => {
+		if (e.target === lightbox) {
+			closeLightbox();
+		}
+	});
+
+	// Keyboard navigation
+	document.addEventListener('keydown', (e) => {
+		if (lightbox.style.display === 'block') {
+			switch (e.key) {
+				case 'Escape':
+					closeLightbox();
+					break;
+				case 'ArrowLeft':
+					prevImage();
+					break;
+				case 'ArrowRight':
+					nextImage();
+					break;
+			}
+		}
+	});
+
+	// Initialize visible images
+	updateVisibleImages();
+
+	// Fade in animations
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('visible');
+			}
+		});
+	}, observerOptions);
+
+	document.querySelectorAll('.fade-in').forEach(el => {
+		observer.observe(el);
+	});
+</script>
+</Layout>

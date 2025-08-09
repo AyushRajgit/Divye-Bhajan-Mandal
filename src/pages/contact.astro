@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact Us - Shubh Jagran">
+  <Header />
+  
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title fade-in">संपर्क करेंs</h1>
+        <p class="page-subtitle fade-in">आध्यात्मिक आयोजनों और सामुदायिक कार्यक्रमों के लिए हमसे संपर्क करें</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-info fade-in">
+          <h2>संपर्क करें</h2>
+          <p>हम आपका स्वागत करते हैं| यदि हमारे जागरणों के बारे में कोई प्रश्न हो, प्रार्थना के लिए निवेदन करना चाहें, या हमारे आध्यात्मिक समुदाय से जुड़ने की जानकारी पाना चाहें, तो बेझिझक हमसे संपर्क करें।</p>
+          
+          <div class="contact-details">
+  <div class="contact-item">
+    <div class="contact-icon">📞</div>
+    <div class="contact-text">
+      <h4>फ़ोन</h4>
+      <p>+91 8750505576</p>
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-icon">▶️</div>
+    <div class="contact-text">
+      <h4>YouTube Channel</h4>
+      <a href="https://youtube.com/@atulmishra.?si=A-lbsUqsfekl2dpE" target="_blank" class="btn-red">
+        Subscribe on YouTube
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-icon">📷</div>
+    <div class="contact-text">
+      <h4>Instagram</h4>
+      <a href="https://www.instagram.com/atulmishra4090/" target="_blank" class="btn-red">
+        Follow on Instagram
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-icon">📘</div>
+    <div class="contact-text">
+      <h4>Facebook Page</h4>
+      <a href="https://www.facebook.com/reel/1853808198689874/" target="_blank" class="btn-red">
+        Visit Facebook Page
+      </a>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+
+
+
+.btn-red {
+  display: inline-block;
+  background-color: #f53232ff; /* dark red shade */
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-red:hover {
+  background-color: #c03333ff; /* darker red on hover */
+  transform: translateY(-2px);
+}
+
+  .page-header {
+    background: linear-gradient(rgba(139,0,0,0.8), rgba(92,0,0,0.8)),
+                url('https://images.pexels.com/photos/6611184/pexels-photo-6611184.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
+    padding: 4rem 0;
+    text-align: center;
+     margin-top: 115px; 
+    color: white;
+  }
+  .page-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+  }
+  .page-subtitle {
+    font-size: 1.2rem;
+    color: var(--light-saffron);
+  }
+  .contact-section {
+    padding: 5rem 0;
+  }
+  .contact-info h2 {
+    font-size: 2.5rem;
+    color: var(--maroon);
+    margin-bottom: 1.5rem;
+  }
+  .contact-info > p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+  }
+
+  /* make contact items 2 per row */
+  .contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--cream);
+    border-radius: 15px;
+    border-left: 4px solid var(--saffron);
+  }
+  .contact-icon {
+    font-size: 2rem;
+    min-width: 60px;
+    text-align: center;
+  }
+  .contact-text h4 {
+    color: var(--maroon);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .contact-text p, .contact-text a {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+    text-decoration: none;
+  }
+  .contact-text a:hover {
+    text-decoration: none;
+  }
+  .contact-text em {
+    color: var(--saffron);
+    font-size: 0.9rem;
+  }
+  .emergency-contact {
+    padding: 3rem 0;
+    background: white;
+  }
+  .emergency-card {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(238, 90, 36, 0.3);
+  }
+  .emergency-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .emergency-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  .emergency-card p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  .emergency-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .emergency-number, .emergency-email {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  .emergency-number:hover, .emergency-email:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+    .contact-info h2 {
+      font-size: 2rem;
+    }
+    .contact-details {
+      grid-template-columns: 1fr;
+    }
+    .emergency-numbers {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+
+<script>
+  // Fade-in animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>

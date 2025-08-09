@@ -1,0 +1,361 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About Us - Shubh Jagran">
+	<Header />
+	
+	<main>
+		<section class="page-header">
+			<div class="container">
+				<h1 class="page-title fade-in">हमारे बारे में - शुभ जागरण</h1>
+				<p class="page-subtitle fade-in">भक्ति और सेवा से भरी हमारी यात्रा</p>
+			</div>
+		</section>
+
+		<section class="about-story">
+			<div class="container">
+				<div class="story-content">
+					<div class="story-text fade-in">
+						<h2>हमारी पावन यात्रा</h2>
+						<p>शुभ जागरण की शुरुआत एक सरल किंतु गहन भावना से हुई — ऐसा स्थान बनाना जहाँ सभी आत्माएँ भक्ति, प्रार्थना और दिव्य उत्सव में एकत्रित हो सकें। हमारी इस यात्रा ने छोटे-छोटे सत्संग से आरंभ होकर आज एक ऐसी परंपरा का रूप ले लिया है जो अनगिनत हृदयों को छूती है और जीवन में सकारात्मक परिवर्तन लाती है।</p>
+						
+						<p>करीब एक दशक पूर्व, कुछ समर्पित भक्तों ने मिलकर भजन संध्या एवं आध्यात्मिक संगति की दिव्यता को समाज के हर व्यक्ति तक पहुँचाने का संकल्प लिया। हमारा विश्वास है कि संगीत आत्मा की सार्वभौमिक भाषा है, और हमारे जागरणों के माध्यम से हम ऐसी आध्यात्मिक ऊर्जा का संचार करते हैं जिसे हर कोई अनुभव कर सके।</p>
+
+						<div class="mission-box">
+							<h3>हमारा उद्देश्य</h3>
+							<p>"सनातन जागरण परंपरा के माध्यम से शांति, भक्ति और आध्यात्मिक जागृति का प्रसार करना, ताकि समाज में प्रेम, सद्भाव और दिव्यता की अनुभूति हो।"</p>
+						</div>
+					</div>
+					
+					<div class="story-image fade-in">
+						<img src="/images/a19.jpg" alt="हमारा समुदाय" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="values-section">
+			<div class="container">
+				<h2 class="section-title fade-in">हमारे मुख्य मूल्य</h2>
+				<div class="values-grid">
+					<div class="value-card fade-in">
+						<div class="value-icon">🕉️</div>
+						<h3>भक्ति</h3>
+						<p>हम हर जागरण में शुद्ध हृदय और सच्ची श्रद्धा के साथ सहभागी होते हैं, जिससे भक्तिमय वातावरण निर्मित होता है।</p>
+					</div>
+					
+					<div class="value-card fade-in">
+						<div class="value-icon">🤝</div>
+						<h3>एकता</h3>
+						<p>हमारे जागरण हर पंथ, वर्ग और पृष्ठभूमि के लोगों का स्वागत करते हैं, जो भाईचारे और एकत्व की भावना को प्रकट करते हैं।</p>
+					</div>
+					
+					<div class="value-card fade-in">
+						<div class="value-icon">🎵</div>
+						<h3>परंपरा</h3>
+						<p>हम भक्ति संगीत की समृद्ध परंपरा का सम्मान करते हुए इसे आज के भक्तों तक पहुँचाते हैं।</p>
+					</div>
+					
+					<div class="value-card fade-in">
+						<div class="value-icon">❤️</div>
+						<h3>सेवा</h3>
+						<p>हम अपने आयोजनों के माध्यम से समाज को आध्यात्मिक ऊर्जा, शांति और अपनापन प्रदान करते हैं।</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		margin-top: 115px;
+	}
+
+	.page-header {
+		background: linear-gradient(rgba(139,0,0,0.8), rgba(92,0,0,0.8)), 
+		            url('https://images.pexels.com/photos/8306288/pexels-photo-8306288.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
+		padding: 4rem 0;
+		text-align: center;
+		color: white;
+	}
+
+	.page-title {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		color: var(--gold);
+	}
+
+	.page-subtitle {
+		font-size: 1.2rem;
+		color: var(--light-saffron);
+	}
+
+	.about-story {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.story-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.story-text h2 {
+		font-size: 2.5rem;
+		color: var(--maroon);
+		margin-bottom: 2rem;
+	}
+
+	.story-text p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+		color: var(--text-dark);
+	}
+
+	.mission-box {
+		background: linear-gradient(135deg, var(--cream), #F5F5DC);
+		padding: 2rem;
+		border-radius: 15px;
+		border-left: 5px solid var(--saffron);
+		margin-top: 2rem;
+	}
+
+	.mission-box h3 {
+		color: var(--maroon);
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.mission-box p {
+		font-style: italic;
+		color: var(--text-dark);
+		font-size: 1.1rem;
+		margin: 0;
+	}
+
+	.story-image img {
+		width: 100%;
+		border-radius: 15px;
+		box-shadow: 0 15px 35px rgba(139, 0, 0, 0.2);
+	}
+
+	.values-section {
+		padding: 5rem 0;
+		background: var(--cream);
+	}
+
+	.values-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.value-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 15px;
+		text-align: center;
+		box-shadow: 0 10px 30px rgba(139, 0, 0, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.value-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 20px 40px rgba(139, 0, 0, 0.15);
+	}
+
+	.value-icon {
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.value-card h3 {
+		color: var(--maroon);
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.team-section {
+		padding: 5rem 0;
+		background: white;
+	}
+
+	.team-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 3rem;
+	}
+
+	.team-member {
+		text-align: center;
+	}
+
+	.member-image {
+		width: 200px;
+		height: 200px;
+		margin: 0 auto 1.5rem;
+		border-radius: 50%;
+		overflow: hidden;
+		border: 5px solid var(--gold);
+		box-shadow: 0 10px 30px rgba(139, 0, 0, 0.2);
+	}
+
+	.member-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.member-info h3 {
+		color: var(--maroon);
+		margin-bottom: 0.5rem;
+		font-size: 1.5rem;
+	}
+
+	.role {
+		color: var(--saffron);
+		font-weight: 600;
+		margin-bottom: 1rem;
+		font-size: 1.1rem;
+	}
+
+	.what-we-do {
+		padding: 5rem 0;
+		background: var(--cream);
+	}
+
+	.activities-list {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.activity-item {
+		display: flex;
+		align-items: flex-start;
+		gap: 2rem;
+		margin-bottom: 3rem;
+		padding: 2rem;
+		background: white;
+		border-radius: 15px;
+		box-shadow: 0 5px 20px rgba(139, 0, 0, 0.1);
+	}
+
+	.activity-icon {
+		font-size: 3rem;
+		min-width: 80px;
+		text-align: center;
+	}
+
+	.activity-content h3 {
+		color: var(--maroon);
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.activity-content p {
+		line-height: 1.8;
+		color: var(--text-dark);
+	}
+
+	.join-us {
+		padding: 5rem 0;
+		background: linear-gradient(135deg, var(--maroon), var(--dark-red));
+		color: white;
+		text-align: center;
+	}
+
+	.join-content h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1.5rem;
+		color: var(--gold);
+	}
+
+	.join-content p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		line-height: 1.8;
+		color: var(--light-saffron);
+	}
+
+	.join-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	@media (max-width: 768px) {
+		.page-title {
+			font-size: 2rem;
+		}
+
+		.story-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.story-text h2 {
+			font-size: 2rem;
+		}
+
+		.values-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.team-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.activity-item {
+			flex-direction: column;
+			text-align: center;
+			gap: 1rem;
+		}
+
+		.activity-icon {
+			min-width: auto;
+		}
+
+		.join-content h2 {
+			font-size: 2rem;
+		}
+
+		.join-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>
+
+<script>
+	// Fade in animations
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('visible');
+			}
+		});
+	}, observerOptions);
+
+	document.querySelectorAll('.fade-in').forEach(el => {
+		observer.observe(el);
+	});
+</script>
+</Layout>

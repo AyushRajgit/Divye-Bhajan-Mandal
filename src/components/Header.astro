@@ -1,0 +1,245 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header">
+	<div class="top-bar">
+		<div class="container top-bar-content">
+			<div class="contact-info">
+				📞 +91-8750505576 
+			</div>
+			<div class="company-name">Divya Bhajan Mandal, Delhi NCR</div>
+		</div>
+	</div>
+	<nav class="navbar">
+		<div class="container">
+			<div class="nav-content">
+				<a href="/" class="logo">
+					<img src="/public/images/a16.png" alt="Logo" class="logo-image" />
+				</a>
+
+				<button class="mobile-toggle" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+
+				<ul class="nav-links">
+					<li>
+						<a href="/" class={currentPath === "/" ? "active" : ""}
+							>Home</a
+						>
+					</li>
+					<li>
+						<a
+							href="/photos"
+							class={currentPath === "/photos" ? "active" : ""}
+							>Photo Gallery</a
+						>
+					</li>
+					<li>
+						<a
+							href="/about"
+							class={currentPath === "/about" ? "active" : ""}
+							>About Us</a
+						>
+					</li>
+					<li>
+						<a
+							href="/contact"
+							class={currentPath === "/contact" ? "active" : ""}
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<style>
+	/* Top Bar */
+	.top-bar {
+		background: var(--maroon); /* use your theme red or #a50000 */
+		color: white;
+		font-size: 0.9rem;
+		padding: 0.4rem 0;
+	}
+
+	.top-bar-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.company-name {
+		font-weight: bold;
+	}
+
+	.contact-info,
+	.company-name {
+		white-space: nowrap;
+	}
+
+	@media (max-width: 768px) {
+		.top-bar-content {
+			flex-direction: column;
+			gap: 0.3rem;
+		}
+	}
+
+	.logo-image {
+		width: 95px; /* adjust size as needed */
+		height: auto;
+	}
+
+	.header {
+		background: rgb(255, 255, 255);
+		backdrop-filter: blur(10px);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		border-bottom: 2px solid var(--border-color);
+	}
+
+	.navbar {
+		padding: 1rem 0;
+	}
+
+	.nav-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: var(--maroon);
+		font-weight: 600;
+		font-size: 1.5rem;
+	}
+
+	.om-symbol {
+		font-size: 2rem;
+		margin-right: 0.5rem;
+		color: var(--saffron);
+	}
+
+	.logo-text {
+		font-family: "Crimson Text", serif;
+	}
+
+	.mobile-toggle {
+		display: none;
+		flex-direction: column;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+	}
+
+	.mobile-toggle span {
+		width: 25px;
+		height: 3px;
+		background: var(--maroon);
+		margin: 3px 0;
+		transition: 0.3s;
+	}
+
+	.nav-links {
+		display: flex;
+		list-style: none;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.nav-links a {
+		text-decoration: none;
+		color: var(--text-dark);
+		font-weight: 500;
+		transition: all 0.3s ease;
+		position: relative;
+		padding: 0.5rem 0;
+	}
+
+	.nav-links a::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: linear-gradient(90deg, var(--saffron), var(--gold));
+		transition: width 0.3s ease;
+	}
+
+	.nav-links a:hover::after,
+	.nav-links a.active::after {
+		width: 100%;
+	}
+
+	.nav-links a:hover,
+	.nav-links a.active {
+		color: var(--maroon);
+	}
+
+	@media (max-width: 768px) {
+		.mobile-toggle {
+			display: flex;
+		}
+
+		.nav-links {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: white;
+			flex-direction: column;
+			padding: 2rem;
+			transform: translateY(-100%);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+			border-top: 2px solid var(--border-color);
+		}
+
+		.nav-links.active {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.nav-links li {
+			width: 100%;
+			text-align: center;
+		}
+
+		.nav-links a {
+			display: block;
+			padding: 1rem;
+			border-bottom: 1px solid var(--border-color);
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const mobileToggle = document.querySelector(".mobile-toggle");
+		const navLinks = document.querySelector(".nav-links");
+
+		mobileToggle?.addEventListener("click", () => {
+			navLinks?.classList.toggle("active");
+		});
+
+		// Close mobile menu when clicking on a link
+		navLinks?.addEventListener("click", (e) => {
+			if (e.target.tagName === "A") {
+				navLinks.classList.remove("active");
+			}
+		});
+	});
+</script>
